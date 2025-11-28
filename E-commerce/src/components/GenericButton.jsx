@@ -1,4 +1,4 @@
-export default function GenericButton ({nema, color}){
+export default function GenericButton ({name, color}){
     const myStyles = {
         backgroundColor: color,
         fontFamily: 'monospace',

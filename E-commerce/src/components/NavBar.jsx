@@ -1,11 +1,12 @@
 import './NavBar.css'
 import GenericButton from './GenericButton';
 
-export default function Navbar(Logosrc){ 
+
+export default function Navbar({logo}){ 
     return(
         <nav className="nav-container">
-            <div className='Logo'>
-                <img src= {Logosrc} alt="Logo E-commerce" />
+            <div className='logo'>
+                <img src= {logo} alt="Logo E-commerce" className='logo-img' />
             </div>
             <GenericButton name= "Inicio" color="white" />
             <GenericButton name = "Productos" color="white" />
