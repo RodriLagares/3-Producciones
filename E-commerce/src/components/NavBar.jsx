@@ -1,18 +1,33 @@
 import './NavBar.css'
-import GenericButton from './GenericButton';
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar({logo}){ 
     return(
-        <nav className="nav-container">
-            <div className='logo'>
-                <img src= {logo} alt="Logo E-commerce" className='logo-img' />
-            </div>
-            <GenericButton name= "Inicio" color="white" />
-            <GenericButton name = "Productos" color="white" />
-            <GenericButton name = "Contacto" color="white" />
+        <>
+        <nav>
+        <link to="/">
+        <button>
+            <img 
+            style={{width: 60}}
+            src='../img/Logo.png'
+            alt='Home'
+            />
+        </button>
+        </link>
+        <button>
+            <Link to="HomeContact">Contacto</Link>
+        </button>
+        <button>
+            <Link to="HomeProduct">Productos</Link>
+        </button>
+        <button>
+            <Link to="HomeServices">Servicios</Link>
+        </button>
+        <button>
+            <Link to="HomeView">Home</Link>
+        </button>
         </nav>
+        </>
     )
 }
-
-
